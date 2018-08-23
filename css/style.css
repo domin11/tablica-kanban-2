@@ -1,26 +1,24 @@
-body { margin: 0; }
+@import url("https://fonts.googleapis.com/css?family=Courgette");
+body { margin: 0 auto; padding: 0; background-image: url("https://www.publicdomainpictures.net/pictures/30000/velka/cork-board.jpg"); font-family: 'Courgette', cursive; }
 
-* { box-sizing: border-box; }
+.container { width: 100%; padding-top: 8vh; height: 100vh; text-align: center; margin: 0 auto; }
 
-.ui-sortable { min-height: 80px; }
+.board { margin: 0 auto; }
 
-.btn-delete { position: absolute; right: 0; top: 0; width: 22px; height: 22px; border: 0; background-color: rgba(0, 0, 0, 0.4); color: white; }
+.column-container { margin: 0 auto; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-/* BOARD */
-.board h1 { margin-left: 8px; }
+.column { width: 100%; margin-left: 40px; }
 
-.column-container { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+.column-title { background: white; width: 300px; padding: 30px 15px; font-size: 46px; border: 1px solid #DDD; line-height: 30px; position: relative; box-shadow: 0 0 10px #DDD; border-radius: 4px; }
 
-/* COLUMN */
-.column { -ms-flex-order: 1; order: 1; min-width: 300px; min-height: 50vh; background-color: lightgrey; margin-left: 8px; list-style: none; position: relative; }
+.column-title img { position: absolute; right: 0; top: -20px; }
 
-.column-add-card { cursor: pointer; text-decoration: underline; margin: 5px 8px; display: block; }
+ul { list-style-type: none; min-height: 90px; }
 
-/* STYLE KARTY */
-.card { box-sizing: border-box; display: block; height: 60px; margin-bottom: 5px; padding: 4px; overflow: hidden; position: relative; }
+.card { background: #FFFFCA; width: 300px; margin-left: -40px; margin-bottom: 20px; padding: 30px 15px; font-size: 30px; border: 1px solid #DDD; line-height: 30px; position: relative; box-shadow: 0 0 10px #DDD; border-radius: 4px; }
 
-.card-list { list-style: none; margin: 5px; padding: 0px; }
+.card img { position: absolute; right: 0; top: -20px; }
 
-.card-description { margin: 2px 0; }
+button { background: white; font-family: 'Arial'; font-size: 14px; font-weight: bold; padding: 6px; cursor: pointer; }
 
-.card-placeholder { box-sizing: border-box; display: block; height: 60px; margin-bottom: 5px; border: 2px solid lightgrey; background-color: lightblue; }
+.btn-delete { position: absolute; right: 0; bottom: 0; }

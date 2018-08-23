@@ -1,70 +1,78 @@
-body {margin: 0;}
-* {box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css?family=Courgette');
 
-.ui-sortable {
-  min-height: 80px;
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-image: url('https://www.publicdomainpictures.net/pictures/30000/velka/cork-board.jpg');
+  font-family: 'Courgette', cursive;
+}
+.container {
+	width: 100%;
+	padding-top: 8vh;
+	height: 100vh;
+	text-align: center;
+	margin: 0 auto;
+}
+.board {
+  margin: 0 auto;
+}
+.column-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  margin-left: 40px;
+}
+.column-title {
+  background: white;
+  width: 300px;
+  padding: 30px 15px;
+  font-size: 46px;
+  border: 1px solid #DDD;
+  line-height: 30px;
+  position: relative;
+  box-shadow: 0 0 10px #DDD;
+  border-radius :4px;
+  img {
+    position:absolute;
+    right:0;
+    top:-20px;
+  }
+}
+ul {
+  list-style-type: none;
+  min-height: 90px;
+}
+.card {
+	background: #FFFFCA;
+	width: 300px;
+  margin-left: -40px;
+  margin-bottom: 20px;
+	padding: 30px 15px;
+  font-size: 30px;
+	border: 1px solid #DDD;
+	line-height: 30px;
+	position: relative;
+	box-shadow: 0 0 10px #DDD;
+	border-radius : 4px;
+  img {
+  	position: absolute;
+  	right: 0;
+  	top: -20px;
+  }
+}
+button {
+  background: white;
+  font-family: 'Arial';
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px;
+  cursor: pointer;
 }
 .btn-delete {
   position: absolute;
   right: 0;
-  top: 0;
-  width: 22px;
-  height: 22px;
-  border: 0;
-  background-color: rgba(0,0,0,0.4);
-  color: white;
-}
-/* BOARD */
-.board h1 {
-  margin-left: 8px;
-}
-.column-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-
-/* COLUMN */
-.column {
-  order: 1;
-  min-width: 300px;
-  min-height: 50vh;
-  background-color: lightgrey;
-  margin-left: 8px;
-  list-style: none;
-  position: relative;
-}
-.column-add-card {
-  cursor: pointer;
-  text-decoration: underline;
-  margin: 5px 8px;
-  display: block;
-}
-
-/* STYLE KARTY */
-.card {
-  box-sizing: border-box;
-  display: block;
-  height: 60px;
-  margin-bottom: 5px;
-  padding: 4px;
-  overflow: hidden;
-  position: relative;
-}
-.card-list {
-  list-style: none;
-  margin: 5px;
-  padding: 0px;
-}
-.card-description {
-  margin: 2px 0;
-}
-.card-placeholder {
-  box-sizing: border-box;
-  display: block;
-  height: 60px;
-  margin-bottom: 5px;
-  border: 2px solid lightgrey;
-  background-color: lightblue;
+  bottom: 0;
 }
