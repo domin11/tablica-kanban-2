@@ -1,6 +1,5 @@
 function Card(id, name) {
   var self = this;
-
   this.id = id;
   this.name = name || 'No name given';
   this.element = generateTemplate('card-template', { description: this.name }, 'li');
@@ -22,7 +21,7 @@ Card.prototype = {
         return resp.json();
       })
       .then(function(resp) {
-        self.element.parentNode.removeChild(this.element);
+        self.element.parentNode.removeChild(self.element);
       })
   }
 };

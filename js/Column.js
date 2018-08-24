@@ -1,6 +1,7 @@
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 
 function Column(id, name) {
+    var self = this;
     this.id = id;
     this.name = name || 'No name given';
     this.element = generateTemplate('column-template', { name: this.name, id: this.id });
@@ -12,7 +13,7 @@ function Column(id, name) {
 
     if (event.target.classList.contains('add-card')) {
       var cardName = prompt("Enter the name of the card");
-    
+
       var data = new FormData();
       data.append('name', cardName);
       data.append('bootcamp_kanban_column_id', self.id);
